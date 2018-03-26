@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>信息展示</h1>
+	<br><br><br>
+    <table>
+   <tr>
+       <th align="center">源刊名称</th>
+		<th align="center">文献标题</th>
+        <th align="center">作者</th>&nbsp;
+        <th align="center">出版年份</th>&nbsp;
+        <th align="center">源刊期号</th>&nbsp;
+        <th align="center">源刊页号</th>&nbsp;
+    </tr>
+    {% for line in journal_list %}
+    <tr>
+        <td align="center">{{line.bejournalid.journalname}}</td>
+        <td align="center">{{line.title}}</td>
+        <td align="center">{{line.paperauthor.authorname}}</td>
+        <td align="center">{{line.publicdate}}</td>
+        <td align="center">{{line.journalversion}}</td>
+        <td align="center">{{line.journalpages}}</td>
+
+
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
