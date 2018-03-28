@@ -44,7 +44,7 @@ def searchindex(request):
             search_messages = models.SportsPaper.objects.filter(title__icontains=searchtext).order_by('-publicdate')
         else:
             search_messages = models.SportsPaper.objects.filter(title__icontains=searchtext)
-        return (render(request, 'table_test_pa.html', {'papers_list': search_messages}))
+        return (render(request, 'table_test_pa.html', {'papers_list': search_messages,'trantext':searchtext}))
 
     if sel_content == "2":   #post到表单中select组件的值为2的时候
         if sel_order=="21":
@@ -63,7 +63,7 @@ def searchindex(request):
             search_messages = models.SportsPaper.objects.filter(paperauthor__authorname__icontains=searchtext).order_by('-publicdate')
         else:
             search_messages = models.SportsPaper.objects.filter(paperauthor__authorname__icontains=searchtext)
-        return (render(request, 'table_test_au.html', {'authors_list': search_messages}))
+        return (render(request, 'table_test_au.html', {'authors_list': search_messages,'trantext':searchtext}))
 
 
 
@@ -84,7 +84,7 @@ def searchindex(request):
             search_messages = models.SportsPaper.objects.filter(bejournalid__journalname__icontains=searchtext).order_by('-publicdate')
         else:
             search_messages = models.SportsPaper.objects.filter(bejournalid__journalname__icontains=searchtext)
-        return (render(request, 'table_test_jl.html', {'journal_list': search_messages}))
+        return (render(request, 'table_test_jl.html', {'journal_list': search_messages,'trantext':searchtext}))
 
     return (render(request, 'search_url.html'))
 

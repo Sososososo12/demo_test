@@ -37,3 +37,4 @@ urlpatterns = [
     url('paper_district/',getsta_pa_dis_table,name="static_table4"),
     url('book_sta/',getsta_bo_table,name="static_table5"),
 ]
+# 表格和图片信息分开，标题改进
