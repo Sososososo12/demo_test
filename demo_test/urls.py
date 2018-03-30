@@ -34,7 +34,7 @@ urlpatterns = [
     url('excel_djangonew2/',getsta_table1,name="static_table1"),
     url('core_fund/',getsta_co_fund_table,name="static_table2"),
     url('paper_organ/',getsta_pa_org_table,name="static_table3"),
-    url('paper_district/',getsta_pa_dis_table,name="static_table4"),
+    url('paper_distrinct_new/',getsta_pa_dis_table,name="static_table4"),
     url('book_sta/',getsta_bo_table,name="static_table5"),
 ]
 # 表格和图片信息分开，标题改进

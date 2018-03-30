@@ -101,7 +101,7 @@ def getsta_pa_org_table(request):
     return (render(request, 'paper_organization.htm'))
 
 def getsta_pa_dis_table(request):
-    return (render(request, 'paper_district.htm'))
+    return (render(request, 'paper_distrinct_new.htm'))
 
 def getsta_bo_table(request):
     return (render(request, 'book_sta.htm'))
