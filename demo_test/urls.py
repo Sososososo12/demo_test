@@ -37,6 +37,6 @@ urlpatterns = [
     url('paper_organ/',getsta_pa_org_table,name="static_table3"),
     url('paper_distrinct_new/',getsta_pa_dis_table,name="static_table4"),
     url('book_sta/',getsta_bo_table,name="static_table5"),
-url(r'^favicon.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
+    url(r'^favicon.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
 ]
 # 表格和图片信息分开，标题改进
