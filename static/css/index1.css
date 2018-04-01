@@ -122,8 +122,8 @@ ul li:hover a {
 */
 	padding-bottom: 70px;
 	padding-top: 35px;
-	margin-top: -5px;
-	margin-bottom: 0px;
+	margin-top: 15px;
+	margin-bottom: 5px;
 }
 .thumbnail {
 	width: 25%;
@@ -250,7 +250,7 @@ footer .footer_column p {
 	padding-top: 60px;
 	padding-bottom: 60PX;
 	margin-bottom: 0px;
-	background-image: url(../images/pattern.png);
+	/*background-image: url(../images/pattern.jpg);*/
 	background-repeat: repeat;
 }
 footer {

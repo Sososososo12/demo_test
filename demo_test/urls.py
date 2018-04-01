@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 # from django.urls import path
 from django.views.generic import TemplateView
+from django.views.generic.base import RedirectView
 
 from sports.views import getsearchhtml, gettable,searchindex,getsta_index,getsta_table1,getsta_co_fund_table,getsta_pa_org_table,getsta_pa_dis_table,getsta_bo_table
 
@@ -36,5 +37,6 @@ urlpatterns = [
     url('paper_organ/',getsta_pa_org_table,name="static_table3"),
     url('paper_distrinct_new/',getsta_pa_dis_table,name="static_table4"),
     url('book_sta/',getsta_bo_table,name="static_table5"),
+url(r'^favicon.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
 ]
 # 表格和图片信息分开，标题改进

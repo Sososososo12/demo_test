@@ -250,7 +250,7 @@ footer .footer_column p {
 	padding-top: 60px;
 	padding-bottom: 60PX;
 	margin-bottom: 0px;
-	background-image: url(../images/pattern.png);
+	/*background-image: url(../images/pattern.png);*/
 	background-repeat: repeat;
 }
 footer {
