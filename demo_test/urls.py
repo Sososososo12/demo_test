@@ -18,6 +18,8 @@ from django.contrib import admin
 # from django.urls import path
 from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
+from django.views import static
+from django.conf import settings
 
 from sports.views import getsearchhtml, gettable,searchindex,getsta_index,getsta_table1,getsta_co_fund_table,getsta_pa_org_table,getsta_pa_dis_table,getsta_bo_table
 
@@ -38,5 +40,7 @@ urlpatterns = [
     url('paper_distrinct_new/',getsta_pa_dis_table,name="static_table4"),
     url('book_sta/',getsta_bo_table,name="static_table5"),
     url(r'^favicon.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
+    # 添加DEBUG=True时的static_root路径
+    url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT }, name='static'),
 ]
 # 表格和图片信息分开，标题改进
