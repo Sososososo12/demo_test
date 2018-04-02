@@ -21,7 +21,7 @@ from django.views.generic.base import RedirectView
 from django.views import static
 from django.conf import settings
 
-from sports.views import getsearchhtml, gettable,searchindex,getsta_index,getsta_table1,getsta_co_fund_table,getsta_pa_org_table,getsta_pa_dis_table,getsta_bo_table
+from sports.views import getsearchhtml, gettable,searchindex,getsta_index,getsta_table1,getsta_core_fund_table,getsta_core_fund_pic,getsta_pa_org_table,getsta_pa_org_pic,getsta_pa_dis_table,getsta_pa_dis_pic,getsta_bo_table,getsta_bo_quote_pic
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -34,12 +34,19 @@ urlpatterns = [
     # url('form/',searchindex)
     url('search_url/',searchindex,name="searchhtml"),
     url('sta_index/',getsta_index,name="static_index"),
-    url('excel_djangonew2/',getsta_table1,name="static_table1"),
-    url('core_fund/',getsta_co_fund_table,name="static_table2"),
-    url('paper_organ/',getsta_pa_org_table,name="static_table3"),
-    url('paper_distrinct_new/',getsta_pa_dis_table,name="static_table4"),
-    url('book_sta/',getsta_bo_table,name="static_table5"),
+    url('core_quote/',getsta_table1,name="static_table1"),
+    url('core_fund/',getsta_core_fund_table,name="static_table2"),
+    url('core_fund_pic/',getsta_core_fund_pic,name="static_pic2"),
+    url('pa_org/',getsta_pa_org_table,name="static_table3"),
+    url('pa_org_pic/',getsta_pa_org_pic,name="static_pic3"),
+    url('pa_dis/',getsta_pa_dis_table,name="static_table4"),
+    url('pa_dis_pic/',getsta_pa_dis_pic,name="static_pic4"),
+    url('book_quote/',getsta_bo_table,name="static_table5"),
+    url('book_quote_pic/',getsta_bo_quote_pic,name="static_pic5"),
     url(r'^favicon.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
+
+
+
     # 添加DEBUG=True时的static_root路径
     url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT }, name='static'),
 ]

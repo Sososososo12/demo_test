@@ -92,19 +92,27 @@ def getsta_index(request):
     return (render(request, 'statistics_index.html'))
 
 def getsta_table1(request):
-    return (render(request, 'excel_djangonew2.htm'))
+    return (render(request, 'core_quote.html'))
 
-def getsta_co_fund_table(request):
-    return (render(request, 'core_fund.htm'))
+def getsta_core_fund_table(request):
+    return (render(request, 'core_fund.html'))
+def getsta_core_fund_pic(request):
+    return (render(request, 'core_fund_pic.html'))
 
 def getsta_pa_org_table(request):
-    return (render(request, 'paper_organization.htm'))
+    return (render(request, 'pa_org.html'))
+def getsta_pa_org_pic(request):
+    return (render(request, 'pa_org_pic.html'))
 
 def getsta_pa_dis_table(request):
-    return (render(request, 'paper_distrinct_new.htm'))
+    return (render(request, 'pa_dis.html'))
+def getsta_pa_dis_pic(request):
+    return (render(request, 'pa_dis_pic.html'))
 
 def getsta_bo_table(request):
-    return (render(request, 'book_sta.htm'))
+    return (render(request, 'book_quote.html'))
+def getsta_bo_quote_pic(request):
+    return (render(request, 'book_quote_pic.html'))
 
 def backhome(request):
     return (render(request,'index_welcome.html'))
