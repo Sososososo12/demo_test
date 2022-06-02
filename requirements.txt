@@ -20,7 +20,7 @@ future==0.16.0
 get==0.0.21
 h5py==2.7.1
 hdfs==2.1.0
-html5lib==0.9999999
+html5lib==0.99999999
 hyperlink==17.3.1
 idna==2.6
 incremental==17.5.0
